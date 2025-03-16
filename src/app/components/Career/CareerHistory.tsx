@@ -27,7 +27,7 @@ const CareerHistory = () => {
   ]
 
   return (
-    <div ref={ref} className='flex flex-col gap-[150px] items-center justify-center w-[70%] relative'>
+    <div ref={ref} className='flex flex-col gap-[150px] items-center justify-center w-[70%] relative font-[family-name:var(--font-geist-jakarta)]'>
       {/* Timeline Line */}
       <motion.div
         style={{ height: timelineHeight,
@@ -38,7 +38,15 @@ const CareerHistory = () => {
       />
       <div className="absolute left-[25px] top-[85px] w-[1.5px] bg-[#212121] h-full z-[-2]" />
 
-      <div className='text-white text-[50px]'>Carrer History</div>
+      <motion.div
+        initial={{ textShadow: "0px 0px 0px rgba(100,100,100,0)", y: 50, opacity: 0 }}
+        whileInView={{ textShadow: "0px 5px 10px rgba(100,100,100,0.6)", y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ amount: 1 }}
+        className="drop-shadow-[0_5px_20px_rgba(100,100,100,1)] text-[60px] font-medium text-white"
+      >
+        Career History
+      </motion.div>
       <div className='flex flex-col gap-[100px] w-full'>
         {history.map((company, key) => (
           <CarrerCard key={key} company={company} />

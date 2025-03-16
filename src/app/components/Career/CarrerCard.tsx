@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 
@@ -15,9 +16,24 @@ const CarrerCard = ({ company }: Props) => {
         <div className='text-[var(--sec-text)] text-[24px] font-medium'>{company.timeline}</div>
       </div>
       <div className='flex flex-col ml-[80px]'>
-        <div className='text-white text-[20px] font-semibold'>{company.designation}</div>
-        <div className='text-[var(--prim-text)] text-[20px] font-medium mt-2'>{company.companyName}</div>
-        <div className='text-white mt-4'>{company.summary}</div>
+        <motion.div
+          viewport={{ amount: 0.4 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          initial={{ y: -10, x: -20, opacity: 0 }}
+          whileInView={{ y: 0, x: 0, opacity: 1 }}
+          className='text-white text-[20px] font-semibold'>{company.designation}</motion.div>
+        <motion.div
+          viewport={{ amount: 0.4 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          initial={{ y: -10, x: -20, opacity: 0 }}
+          whileInView={{ y: 0, x: 0, opacity: 1 }}
+          className='text-[var(--prim-text)] text-[20px] font-medium mt-2'>{company.companyName}</motion.div>
+        <motion.div
+          viewport={{ amount: 0.4 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          initial={{ y: -10, x: -20, opacity: 0 }}
+          whileInView={{ y: 0, x: 0, opacity: 1 }}
+          className='text-white mt-4'>{company.summary}</motion.div>
       </div>
     </div>
   )

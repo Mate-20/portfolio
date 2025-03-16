@@ -10,10 +10,22 @@ const CarrerCard = ({ company }: Props) => {
   return (
     <div className='flex items-start relative'>
       <div className='flex items-center gap-8 min-w-[350px]'>
-        <div className='w-[50px] h-[50px] border border-[#303030] shadow-lg bg-[#212121] rounded-full flex items-center justify-center'>
-          <Image src={company.logo} alt='logo' className={company.companyName === "10Times" ? "rounded-full" : ""} width={40} height={40} />
+        <div className='perspective-1000'>
+          <motion.div 
+          initial={{rotateY : 0}}
+          viewport={{amount : 0.5}}
+          whileInView={{rotateY : 360}}
+          transition={{delay : 0.2, duration : 0.8}}
+          className='w-[50px] h-[50px] border border-[#303030] shadow-lg bg-[#212121] rounded-full flex items-center justify-center'>
+            <Image src={company.logo} alt='logo' className={company.companyName === "10Times" ? "rounded-full" : ""} width={40} height={40} />
+          </motion.div>
         </div>
-        <div className='text-[var(--sec-text)] text-[24px] font-medium'>{company.timeline}</div>
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ amount: 0.5 }}
+          className='text-[var(--sec-text)] text-[24px] font-medium'>{company.timeline}</motion.div>
       </div>
       <div className='flex flex-col ml-[80px]'>
         <motion.div

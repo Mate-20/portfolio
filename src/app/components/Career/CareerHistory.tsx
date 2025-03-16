@@ -22,7 +22,7 @@ const CareerHistory = () => {
     },
     {
       companyName: 'Nagarro', logo: NagarroLogo, designation: "Software Developer Trainee", timeline: "2023 Mar - 2023 Dec",
-      summary: "Building and managing interactive frontend UIs using React and Next.js. Integrating with backend APIs and services to fetch and manipulate data.Participating in client meetings to gather requirements, provide updates,and address feedback. Building and managing interactive frontend UIs using React and Next.js.Integrating with backend APIs and services to fetch and manipulate data.Participating in client meetings to gather requirements, provide updates,and address feedback."
+      summary: "During my time at Nagarro, I gained hands-on experience in full-stack development, working with modern technologies to build scalable applications. I applied my learning to various projects, including : Library Management System, E-commerce Website, Result Management System and much more. This role helped me strengthen my skills in React, Next.js, Node.js, and database management, while also improving my problem-solving and collaboration abilities."
     }
   ]
 

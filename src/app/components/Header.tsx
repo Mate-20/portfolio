@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Profile from '/public/profile.png'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 
 const Header = () => {
@@ -20,7 +21,7 @@ const Header = () => {
   const smoothScrollY = useSpring(scrollY, {
     stiffness: 80,
     damping: 10,
-    mass:0.5,
+    mass: 0.5,
   });
   // Scale effect for "Software Developer" (grows as you scroll)
   const scale = useTransform(smoothScrollY, [50, 300], [1.2, 2.5], {
@@ -72,8 +73,14 @@ const Header = () => {
         {/* Underline animation */}
 
       </div>
-      <div className='w-[400px] h-[400px] rounded-full bg-[#262626] relative'>
-      </div>
+      <motion.div
+        initial={{ scale: 0.8, opacity : 0 }}
+        animate={{ scale: 1, opacity : 1 }}
+        transition={{ type: "spring", stiffness: 120, damping: 10, duration : 0.8 }}
+        className="w-[400px] h-[400px] overflow-hidden rounded-full bg-[var(--prim-text)] relative"
+      >
+        <Image src={Profile} alt="profile" className="absolute h-[450px] top-[-40px]" />
+      </motion.div>
     </div>
   )
 }

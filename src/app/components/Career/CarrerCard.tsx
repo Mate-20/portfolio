@@ -25,7 +25,7 @@ const CarrerCard = ({ company }: Props) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ amount: 0.5 }}
-          className='text-[var(--sec-text)] text-[24px] font-medium'>{company.timeline}</motion.div>
+          className='text-white text-[24px] font-medium'>{company.timeline}</motion.div>
       </div>
       <div className='flex flex-col ml-[80px]'>
         <motion.div

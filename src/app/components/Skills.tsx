@@ -40,7 +40,7 @@ const SkillRow: React.FC<{ skills: Skill[]; delayOffset: number }> = ({ skills, 
           }}
           viewport={{ amount: 0.5 }}
           whileHover={{ border: "1px solid var(--prim-text)", scale: 1.1 }}
-          className="group cursor-default flex items-center gap-2 py-2 px-4 border border-[#303030] shadow-md bg-[#212121] rounded-[12px] w-fit"
+          className="group cursor-default flex items-center gap-2 py-2 px-4 border border-[#303030] bg-[#212121] rounded-[12px] w-fit"
         >
           <Image src={skill.logo} alt={skill.name} width={20} height={20} />
           <div className="font-semibold bg-gradient-to-r from-[#faf2dc] to-[#faf2dc] bg-clip-text text-transparent transition-all duration-300 group-hover:from-[#56ccf2] group-hover:to-[#2f80ed]">
@@ -76,7 +76,7 @@ const Skills = () => {
       {/* <Dot/> */}
       {/* Animated heading */}
       <motion.div
-        initial={{ textShadow: "0px 0px 0px rgba(100,100,100,0)", y: 50, opacity: 0 }}
+        initial={{ textShadow: "0px 0px 0px rgba(100,100,100,0)", y: 20, opacity: 0 }}
         whileInView={{ textShadow: "0px 5px 10px rgba(100,100,100,0.6)", y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ amount: 1 }}
@@ -84,7 +84,12 @@ const Skills = () => {
       >
         My Tech Stack
       </motion.div>
-
+      <motion.div
+        initial={{ textShadow: "0px 0px 0px rgba(100,100,100,0)", y: -20, opacity: 0 }}
+        whileInView={{ textShadow: "0px 5px 10px rgba(100,100,100,0.6)", y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ amount: 1 }}
+        className='text-[var(--prim-text)] text-[20px] font-light tracking-wider'>My key expertises and technical proficiencies</motion.div>
       {/* Skills Grid */}
       <div className="flex flex-col items-center gap-4 mt-[80px]">
         {Array.from({ length: Math.ceil(skillLogos.length / 4) }, (_, rowIndex) => (

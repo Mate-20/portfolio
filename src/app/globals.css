@@ -34,3 +34,7 @@ body {
 ::-webkit-scrollbar-track {
   background: #171717;
 }
+::selection {
+  background:#56E39F ; /* Change this to any color you like */
+  color: black; /* Text color when selected */
+}

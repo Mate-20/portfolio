@@ -77,9 +77,9 @@ const Header = () => {
         initial={{ scale: 0.8, opacity : 0 }}
         animate={{ scale: 1, opacity : 1 }}
         transition={{ type: "spring", stiffness: 120, damping: 10, duration : 0.8 }}
-        className="w-[400px] h-[400px] overflow-hidden rounded-full bg-[var(--prim-text)] relative"
+        className="w-[400px] h-[400px] overflow-hidden rounded-full bg-[#262626] relative"
       >
-        <Image src={Profile} alt="profile" className="absolute h-[450px] top-[-40px]" />
+        {/* <Image src={Profile} alt="profile" className="absolute h-[450px] top-[-40px]" /> */}
       </motion.div>
     </div>
   )

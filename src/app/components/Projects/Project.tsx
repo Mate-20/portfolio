@@ -74,7 +74,7 @@ const Project = () => {
   return (
     <div ref={ref} className='flex flex-col items-center justify gap-10 relative w-full'>
       <motion.div style={{ rotateZ }} className='w-[400px] h-[400px] -top-[150px] absolute -z-10 opacity-50'>
-        <Image src={SkillCircle} alt='skill' width={400} height={400} />
+        <Image src={SkillCircle} alt='skill' width={400} height={400} unoptimized/>
       </motion.div>
       <Heading text='Projects' size={60} />
       <div className='flex flex-col items-start gap-10'>

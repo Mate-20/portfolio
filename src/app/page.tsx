@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function Home() {
   // const [hovering, setHovering] = useState(false)
   return (
-    <div className="h-[4000px]">
+    <div className="">
       <Navbar />
       <div className="h-[89vh] flex items-center justify-center"><Header /></div>
       <div className="mt-[100px]">

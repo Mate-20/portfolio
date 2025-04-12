@@ -8,7 +8,7 @@ import CustomCursor from "./components/CustomCursor";
 import { useState } from "react";
 
 export default function Home() {
-  const [hovering, setHovering] = useState(false)
+  // const [hovering, setHovering] = useState(false)
   return (
     <div className="h-[4000px]">
       <Navbar />
@@ -17,12 +17,8 @@ export default function Home() {
         <Skills />
       </div>
       <div className="mt-[100px] flex items-center justify-center w-full"><CareerHistory /></div>
-      <div
-        onMouseEnter={() => setHovering(true)}
-        onMouseLeave={() => setHovering(false)}
-        style={{ cursor: hovering ? "none" : "default" }}
-        className="mt-[100px] flex items-center justify-center w-full relative">
-        {hovering && <CustomCursor />}
+      <div className="mt-[300px] flex items-center justify-center w-full relative">
+        {/* {hovering && <CustomCursor />} */}
         <Project />
       </div>
     </div>

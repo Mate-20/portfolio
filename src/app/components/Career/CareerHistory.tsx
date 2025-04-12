@@ -4,6 +4,7 @@ import TenTimesLogo from '/public/10timeslogo.png'
 import NagarroLogo from '/public/nagarrologo.png'
 import CarrerCard from './CarrerCard'
 import { motion, useScroll, useTransform } from "framer-motion";
+import Heading from '../Heading'
 
 const CareerHistory = () => {
 
@@ -15,6 +16,7 @@ const CareerHistory = () => {
   const endScroll = startScroll + (ref.current?.clientHeight ?? 500);
 
   const timelineHeight = useTransform(scrollY, [startScroll+200, endScroll+300], ["0%", "100%"]);
+  
   const history = [
     {
       companyName: '10Times', logo: TenTimesLogo, designation: "SDE-1", timeline: "2024 Jan - Present",
@@ -38,15 +40,7 @@ const CareerHistory = () => {
       />
       <div className="absolute left-[25px] top-[85px] w-[1.5px] bg-[#212121] h-full z-[-2]" />
 
-      <motion.div
-        initial={{ textShadow: "0px 0px 0px rgba(100,100,100,0)", y: 50, opacity: 0 }}
-        whileInView={{ textShadow: "0px 5px 10px rgba(100,100,100,0.6)", y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ amount: 1 }}
-        className="drop-shadow-[0_5px_20px_rgba(100,100,100,1)] text-[60px] font-medium text-white"
-      >
-        Career History
-      </motion.div>
+      <Heading text='Career History' size={60} />
       <div className='flex flex-col gap-[100px] w-full'>
         {history.map((company, key) => (
           <CarrerCard key={key} company={company} />

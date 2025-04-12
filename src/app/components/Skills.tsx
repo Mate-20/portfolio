@@ -23,6 +23,7 @@ import GptLogo from '/public/skills/gptlogo.png'
 import Image, { StaticImageData } from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Dot from './Dot'
+import Heading from './Heading'
 
 // Define the Skill type for type safety
 interface Skill {
@@ -83,15 +84,7 @@ const Skills = () => {
     <div className="flex flex-col items-center justify-center font-[family-name:var(--font-geist-jakarta)] relative">
       {/* <Dot/> */}
       {/* Animated heading */}
-      <motion.div
-        initial={{ textShadow: "0px 0px 0px rgba(100,100,100,0)", y: 20, opacity: 0 }}
-        whileInView={{ textShadow: "0px 5px 10px rgba(100,100,100,0.6)", y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ amount: 1 }}
-        className="drop-shadow-[0_5px_20px_rgba(100,100,100,1)] text-[60px] font-semibold text-white"
-      >
-        My Tech Stack
-      </motion.div>
+      <Heading text='My Tech Stack' size={60} />
       <motion.div
         initial={{ textShadow: "0px 0px 0px rgba(100,100,100,0)", y: -20, opacity: 0 }}
         whileInView={{ textShadow: "0px 5px 10px rgba(100,100,100,0.6)", y: 0, opacity: 1 }}

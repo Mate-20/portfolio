@@ -1,10 +1,14 @@
+'use client'
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import CareerHistory from "./components/Career/CareerHistory";
 import Project from "./components/Projects/Project";
+import CustomCursor from "./components/CustomCursor";
+import { useState } from "react";
 
 export default function Home() {
+  const [hovering, setHovering] = useState(false)
   return (
     <div className="h-[4000px]">
       <Navbar />
@@ -13,7 +17,12 @@ export default function Home() {
         <Skills />
       </div>
       <div className="mt-[100px] flex items-center justify-center w-full"><CareerHistory /></div>
-      <div className="mt-[100px] flex items-center justify-center w-full">
+      <div
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
+        style={{ cursor: hovering ? "none" : "default" }}
+        className="mt-[100px] flex items-center justify-center w-full relative">
+        {hovering && <CustomCursor />}
         <Project />
       </div>
     </div>

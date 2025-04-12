@@ -23,7 +23,7 @@ const ProjectCard = ({ project }: Props) => {
       relative">
       <div className="absolute inset-0 -z-10 rounded-lg bg-[linear-gradient(120deg,#87D6A7,#131313,#131313,#50CC81)] transition-opacity duration-500 group-hover:opacity-0" />
       <div className="absolute inset-0 -z-10 rounded-lg bg-[linear-gradient(180deg,#87D6A7,#131313,#131313,#50CC81)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-      <div className="w-[270px] h-[380px] cursor-pointer bg-[linear-gradient(71deg,#131313,#131313,#1c1c1c,#131313,#131313)] rounded-lg p-1">
+      <div className="w-[270px] h-[380px] bg-[linear-gradient(71deg,#131313,#131313,#1c1c1c,#131313,#131313)] rounded-lg p-1">
         <Image
           src={project.image}
           alt="image"
@@ -37,7 +37,7 @@ const ProjectCard = ({ project }: Props) => {
             </div>
             <div className='text-white text-sm'>{project.desc}</div>
           </div>
-          <button className='cursor-pointer border border-gray-600 rounded-lg flex items-center gap-2 justify-center p-1'>
+          <button className='group-hover:drop-shadow-[0_10px_10px_rgba(100,100,100,0.25)] cursor-pointer border border-gray-600 rounded-lg flex items-center gap-2 justify-center p-1 bg-[linear-gradient(71deg,#131313,#131313,#1c1c1c,#131313,#131313)]'>
             <span className='text-white font-thin'>Check Out</span>
             <ArrowUpRight color='white' />
           </button>

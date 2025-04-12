@@ -16,6 +16,10 @@ import SqlLogo from '/public/skills/sqllogo.png'
 import VercelLogo from '/public/skills/vercellogo.png'
 import NodeLogo from '/public/skills/nodejslogo.png'
 import PostmanLogo from '/public/skills/postmanlogo.png'
+import JiraLogo from '/public/skills/jiralogo.png'
+import SlackLogo from '/public/skills/slacklogo.png'
+import VscdoeLogo from '/public/skills/vscodelogo.png'
+import GptLogo from '/public/skills/gptlogo.png'
 import Image, { StaticImageData } from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Dot from './Dot'
@@ -70,6 +74,10 @@ const Skills = () => {
     { name: "Postman", logo: PostmanLogo },
     { name: "Sql", logo: SqlLogo },
     { name: "Vercel", logo: VercelLogo },
+    { name: "Vs Code", logo: VscdoeLogo },
+    { name: "Jira", logo: JiraLogo },
+    { name: "Slack", logo: SlackLogo },
+    { name: "Chat Gpt", logo: GptLogo },
   ];
   return (
     <div className="flex flex-col items-center justify-center font-[family-name:var(--font-geist-jakarta)] relative">

@@ -1,0 +1,167 @@
+Portfolio
+Skills :
+css, framer motion, git, html, web comp, tailwind, java, js, nextjs, react, spring boot, ts, node js, postman, sql, vercel, Github, Jira, VS Code, Slack, Gpt, 
+
+Projects :
+Whr.ai, Console.whr.ai, Youtube Clone, Notes App , News app (No ss), Events App, Result Management System 
+
+<motion.div
+        initial={{ opacity: 0, y: 70, }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: .5 }}
+        viewport={{ amount: 1 }}
+        className='flex items-center'>
+        {skillLogos.slice(0, 4).map((value, key) => (
+          <motion.div
+            key={key}
+            style={{ x: positionXOne }}
+            whileHover="hover"
+            className="flex flex-col gap-2 items-center justify-center w-[150px] h-[150px]"
+            variants={{
+              hover: { transition: { staggerChildren: 0.1 } }, // Ensures staggered animation
+            }}
+            initial="initial"
+          >
+            {/* Logo */}
+            <motion.div
+              variants={{
+                initial: { y: 20 },
+                hover: { y: -10, transition: { duration: 0.3 } },
+              }}
+            >
+              <Image src={value.logo} width={60} height={60} alt="logo"/>
+            </motion.div>
+
+            {/* Name (Initially hidden, moves from top while appearing) */}
+            <motion.div
+              variants={{
+                initial: { opacity: 0, y: -20 },
+                hover: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+              }}
+              className="text-[var(--sec-text)] font-semibold text-[18px] text-center"
+            >
+              {value.name}
+            </motion.div>
+          </motion.div>
+        ))}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: .5 }}
+        viewport={{ amount: 1 }}
+        className='flex items-center'>
+        {skillLogos.slice(4, 8).map((value, key) => (
+          <motion.div
+            key={key}
+            style={{ x: positionXTwo }}
+            whileHover="hover"
+            className="flex flex-col gap-2 items-center justify-center w-[150px] h-[150px] "
+            variants={{
+              hover: { transition: { staggerChildren: 0.1 } }, // Ensures staggered animation
+            }}
+            initial="initial"
+          >
+            {/* Logo */}
+            <motion.div
+              variants={{
+                initial: { y: 20 },
+                hover: { y: -10, transition: { duration: 0.3 } },
+              }}
+            >
+              <Image src={value.logo} width={60} height={60} alt="logo" />
+            </motion.div>
+
+            {/* Name (Initially hidden, moves from top while appearing) */}
+            <motion.div
+              variants={{
+                initial: { opacity: 0, y: -20 },
+                hover: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+              }}
+              className="text-[var(--sec-text)] font-semibold text-[18px] text-center"
+            >
+              {value.name}
+            </motion.div>
+          </motion.div>
+        ))}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: .5 }}
+        viewport={{ amount: .8 }}
+        className='flex items-center'>
+        {skillLogos.slice(8,12).map((value, key) => (
+          <motion.div
+            key={key}
+            style={{ x: positionXThree }}
+            whileHover="hover"
+            className="flex flex-col gap-2 items-center justify-center w-[150px] h-[150px] "
+            variants={{
+              hover: { transition: { staggerChildren: 0.1 } }, // Ensures staggered animation
+            }}
+            initial="initial"
+          >
+            {/* Logo */}
+            <motion.div
+              variants={{
+                initial: { y: 20 },
+                hover: { y: -10, transition: { duration: 0.3 } },
+              }}
+            >
+              <Image src={value.logo} width={60} height={60} alt="logo" />
+            </motion.div>
+
+            {/* Name (Initially hidden, moves from top while appearing) */}
+            <motion.div
+              variants={{
+                initial: { opacity: 0, y: -20 },
+                hover: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+              }}
+              className="text-[var(--sec-text)] font-semibold text-[18px] text-center"
+            >
+              {value.name}
+            </motion.div>
+          </motion.div>
+        ))}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: .5 }}
+        viewport={{ amount: .8 }}
+        className='flex items-center'>
+        {skillLogos.slice(12).map((value, key) => (
+          <motion.div
+            key={key}
+            style={{ x: positionXThree }}
+            whileHover="hover"
+            className="flex flex-col gap-2 items-center justify-center w-[150px] h-[150px] "
+            variants={{
+              hover: { transition: { staggerChildren: 0.1 } }, // Ensures staggered animation
+            }}
+            initial="initial"
+          >
+            {/* Logo */}
+            <motion.div
+              variants={{
+                initial: { y: 20 },
+                hover: { y: -10, transition: { duration: 0.3 } },
+              }}
+            >
+              <Image src={value.logo} width={60} height={60} alt="logo" />
+            </motion.div>
+
+            {/* Name (Initially hidden, moves from top while appearing) */}
+            <motion.div
+              variants={{
+                initial: { opacity: 0, y: -20 },
+                hover: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+              }}
+              className="text-[var(--sec-text)] font-semibold text-[18px] text-center"
+            >
+              {value.name}
+            </motion.div>
+          </motion.div>
+        ))}
+      </motion.div>

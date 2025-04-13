@@ -6,13 +6,14 @@ import CareerHistory from "./components/Career/CareerHistory";
 import Project from "./components/Projects/Project";
 import CustomCursor from "./components/CustomCursor";
 import { useState } from "react";
+import HeaderTwo from "./components/HeaderTwo";
 
 export default function Home() {
   // const [hovering, setHovering] = useState(false)
   return (
-    <div className="">
+    <div className="w-[100vw]">
       <Navbar />
-      <div className="h-[89vh] flex items-center justify-center"><Header /></div>
+      <div className="h-[89vh] w-full flex items-center justify-center"><HeaderTwo /></div>
       <div className="mt-[100px]">
         <Skills />
       </div>

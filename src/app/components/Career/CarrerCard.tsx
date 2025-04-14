@@ -8,8 +8,8 @@ interface Props {
 
 const CarrerCard = ({ company }: Props) => {
   return (
-    <div className='flex items-start relative'>
-      <div className='flex items-center gap-8 min-w-[350px]'>
+    <div className='flex items-start relative w-full max-[950px]:justify-between max-[830px]:flex-col max-[600px]:gap-8'>
+      <div className='flex items-center gap-8 min-w-[350px] max-[600px]:min-w-fit'>
         <div className='perspective-1000'>
           <motion.div 
           initial={{rotateY : 0}}
@@ -25,9 +25,9 @@ const CarrerCard = ({ company }: Props) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ amount: 0.5 }}
-          className='text-white text-[24px] font-medium'>{company.timeline}</motion.div>
+          className='text-white text-[24px] font-medium max-[600px]:text-[18px]'>{company.timeline}</motion.div>
       </div>
-      <div className='flex flex-col ml-[80px]'>
+      <div className='flex flex-col ml-[80px] max-[950px]:w-[360px] max-[950px]:ml-0 max-[830px]:w-[80%] max-[830px]:ml-[80px] max-[600px]:ml-0 max-[600px]:w-full'>
         <motion.div
           viewport={{ amount: 0.4 }}
           transition={{ delay: 0.2, duration: 0.8 }}

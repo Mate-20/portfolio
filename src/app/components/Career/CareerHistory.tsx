@@ -29,16 +29,16 @@ const CareerHistory = () => {
   ]
 
   return (
-    <div ref={ref} className='flex flex-col gap-[150px] items-center justify-center w-[70%] relative font-[family-name:var(--font-geist-jakarta)]'>
+    <div ref={ref} className='flex flex-col gap-[150px] items-center justify-center w-[85%] relative font-[family-name:var(--font-geist-jakarta)]'>
       {/* Timeline Line */}
       <motion.div
         style={{ height: timelineHeight,
           maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)",
          }}
-        className="absolute left-[25px] top-[85px] w-[1.5px] bg-gradient-to-b from-[#8deb6a] to-[#60e9d8] h-0 z-[-1]"
+        className="absolute left-[25px] top-[85px] w-[1.5px] bg-gradient-to-b from-[#8deb6a] to-[#60e9d8] h-0 z-[-1] max-[600px]:hidden"
         transition={{ duration: 0.2, ease: "easeOut" }}
       />
-      <div className="absolute left-[25px] top-[85px] w-[1.5px] bg-[#212121] h-full z-[-2]" />
+      <div className="absolute left-[25px] top-[85px] w-[1.5px] bg-[#212121] h-full z-[-2] max-[600px]:hidden" />
 
       <Heading text='Career History' size={60} />
       <div className='flex flex-col gap-[100px] w-full'>

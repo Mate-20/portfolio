@@ -11,15 +11,14 @@ import HeaderTwo from "./components/HeaderTwo";
 export default function Home() {
   // const [hovering, setHovering] = useState(false)
   return (
-    <div className="w-[100vw]">
+    <div className="">
       <Navbar />
       <div className="h-[89vh] w-full flex items-center justify-center"><HeaderTwo /></div>
       <div className="mt-[100px]">
         <Skills />
       </div>
       <div className="mt-[100px] flex items-center justify-center w-full"><CareerHistory /></div>
-      <div className="mt-[300px] flex items-center justify-center w-full relative">
-        {/* {hovering && <CustomCursor />} */}
+      <div className="mt-[300px] flex items-center justify-center w-full relative mb-[80px]">
         <Project />
       </div>
     </div>

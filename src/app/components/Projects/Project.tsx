@@ -19,27 +19,6 @@ interface Project {
   image: StaticImageData
   link: string;
 }
-const ProjectRow: React.FC<{ projects: Project[]; delayOffset: number }> = ({ projects, delayOffset }) => {
-
-  return (
-    <div className="flex items-center  gap-[50px]">
-      {projects.map((project, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.3, delay: index * 0.1 + delayOffset },
-          }}
-          viewport={{ amount: 0.5 }}
-        >
-          <ProjectCard project={project} />
-        </motion.div>
-      ))}
-    </div>
-  );
-};
 
 const Project = () => {
 
@@ -62,32 +41,75 @@ const Project = () => {
   })
 
   const projects = [
-    { name: "Whr.ai", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint asperiores tempora alias perspiciatis porro voluptates at architecto saepe quidem veritatis!", image: Whr, link: "https://whr.ai" },
-    { name: "GTM", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint asperiores tempora alias perspiciatis porro voluptates at architecto saepe quidem veritatis!", image: Gtm, link: "https://gtm.whr.ai/internal" },
-    { name: "Portfolio", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint asperiores tempora alias perspiciatis porro voluptates at architecto saepe quidem veritatis!", image: Portfolio, link: "https://akashjindal.vercel.app/" },
-    { name: "Youtube Clone", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint asperiores tempora alias perspiciatis porro voluptates at architecto saepe quidem veritatis!", image: Youtube, link: "https://github.com/Mate-20/youtube-clone" },
-    { name: "E-commerce App", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint asperiores tempora alias perspiciatis porro voluptates at architecto saepe quidem veritatis!", image: Ecom, link: "https://github.com/Mate-20/MyProjects/tree/master/Java%20%2B%20Angular%20E%20commerce" },
-    { name: "Events App", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint asperiores tempora alias perspiciatis porro voluptates at architecto saepe quidem veritatis!", image: Event, link: "https://github.com/Mate-20/react-event-app" },
-    { name: "Notes App", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint asperiores tempora alias perspiciatis porro voluptates at architecto saepe quidem veritatis!", image: Placeholder, link: "https://github.com/Mate-20/react-notes-app" }
+    {
+      name: "Whr.ai",
+      desc: "AI-powered location intelligence platform for businesses and developers.",
+      image: Whr,
+      link: "https://whr.ai"
+    },
+    {
+      name: "GTM",
+      desc: "Internal tool for managing go-to-market strategies, leads, and outreach.",
+      image: Gtm,
+      link: "https://gtm.whr.ai/internal"
+    },
+    {
+      name: "Portfolio",
+      desc: "My personal portfolio showcasing projects, skills, and experience.",
+      image: Portfolio,
+      link: "https://akashjindal.vercel.app/"
+    },
+    {
+      name: "Youtube Clone",
+      desc: "A functional YouTube UI clone built with React and RapidAPI.",
+      image: Youtube,
+      link: "https://github.com/Mate-20/youtube-clone"
+    },
+    {
+      name: "E-commerce App",
+      desc: "Full-stack e-commerce platform using Java Spring Boot and Angular.",
+      image: Ecom,
+      link: "https://github.com/Mate-20/MyProjects/tree/master/Java%20%2B%20Angular%20E%20commerce"
+    },
+    {
+      name: "Events App",
+      desc: "React-based app to create, manage, and browse local events.",
+      image: Event,
+      link: "https://github.com/Mate-20/react-event-app"
+    },
+    {
+      name: "Notes App",
+      desc: "Simple and responsive notes app with CRUD functionality.",
+      image: Placeholder,
+      link: "https://github.com/Mate-20/react-notes-app"
+    }
   ]
 
   return (
     <div ref={ref} className='flex flex-col items-center justify gap-10 relative w-full'>
-      <motion.div style={{ rotateZ }} className='w-[400px] h-[400px] -top-[150px] absolute -z-10 opacity-50'>
-        <Image src={SkillCircle} alt='skill' width={400} height={400} unoptimized/>
+      <motion.div style={{ rotateZ }} className='w-[400px] h-[400px] -top-[150px] absolute -z-10 
+      opacity-50 max-[500px]:sticky max-[500px]:top-[40%] max-[500px]:w-[300px] max-[500px]:h-[300px] 
+      max-[400px]:h-[250px] max-[400px]:w-[250px]'>
+        <Image src={SkillCircle} alt='skill' width={400} height={400} unoptimized />
       </motion.div>
       <Heading text='Projects' size={60} />
-      <div className='flex flex-col items-start gap-10'>
-        {Array.from({ length: Math.ceil(projects.length / 3) }, (_, rowIndex) => (
-          <ProjectRow
-            key={rowIndex}
-            projects={projects.slice(rowIndex * 3, rowIndex * 3 + 3)}
-            delayOffset={0.2 + rowIndex * 0.1}
-          />
+      <div className='w-[900px] grid grid-cols-3 max-[940px]:grid-cols-2 max-[940px]:w-[700px] max-[710px]:w-[90%] max-[590px]:grid-cols-1 gap-10 place-items-center'>
+        {projects.map((project, key) => (
+          <motion.div
+            key={key}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.2, delay: key * 0.1 },
+            }}
+            viewport={{ amount: 0.1 }}
+          >
+            <ProjectCard project={project} />
+          </motion.div>
         ))}
       </div>
-
-    </div>
+    </div >
   )
 }
 

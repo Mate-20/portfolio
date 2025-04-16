@@ -88,7 +88,7 @@ const Project = () => {
   return (
     <div ref={ref} className='flex flex-col items-center justify gap-10 relative w-full'>
       <motion.div style={{ rotateZ }} className='w-[400px] h-[400px] -top-[150px] absolute -z-10 
-      opacity-60 max-[500px]:sticky max-[500px]:top-[40%] max-[500px]:w-[300px] max-[500px]:h-[300px] 
+      opacity-6 0 max-[500px]:sticky max-[500px]:top-[40%] max-[500px]:w-[300px] max-[500px]:h-[300px] 
       max-[400px]:h-[250px] max-[400px]:w-[250px] max-[500px]:opacity-100'>
         <Image src={SkillCircle} alt='skill' width={400} height={400} unoptimized />
       </motion.div>
@@ -97,10 +97,11 @@ const Project = () => {
         {projects.map((project, key) => (
           <motion.div
             key={key}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 40, scale : 0.8 }}
             whileInView={{
               opacity: 1,
               y: 0,
+              scale : 1,
               transition: { duration: 0.2, delay: key * 0.1 },
             }}
             viewport={{ amount: 0.1 }}

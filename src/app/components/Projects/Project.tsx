@@ -88,7 +88,7 @@ const Project = () => {
   return (
     <div ref={ref} className='flex flex-col items-center justify gap-10 relative w-full'>
       <motion.div style={{ rotateZ }} className='w-[400px] h-[400px] -top-[150px] absolute -z-10 
-      opacity-6 0 max-[500px]:sticky max-[500px]:top-[40%] max-[500px]:w-[300px] max-[500px]:h-[300px] 
+      opacity-60 max-[500px]:sticky max-[500px]:top-[40%] max-[500px]:w-[300px] max-[500px]:h-[300px] 
       max-[400px]:h-[250px] max-[400px]:w-[250px] max-[500px]:opacity-100'>
         <Image src={SkillCircle} alt='skill' width={400} height={400} unoptimized />
       </motion.div>

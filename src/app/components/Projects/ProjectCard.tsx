@@ -54,7 +54,7 @@ const ProjectCard = ({ project }: Props) => {
           <div className='flex flex-col gap-2'>
             <div className="font-medium text-[30px] bg-gradient-to-r from-[#faf2dc] to-[#faf2dc] bg-clip-text text-transparent transition-all duration-300 group-hover:from-[#56ccf2] group-hover:to-[#006dff] flex items-center gap-2">
               {project.name}
-              {project.link.includes("whr") && <Image src={TenTimesLogo} alt='logo' width={15}/>}
+              {(project.link.includes("whr") || project.link.includes("10times")) && <Image src={TenTimesLogo} alt='logo' width={15}/>}
             </div>
             <div className='text-white text-sm'>{project.desc}</div>
           </div>

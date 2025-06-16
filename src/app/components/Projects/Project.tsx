@@ -5,6 +5,7 @@ import Gtm from '/public/projects/gtm.png'
 import Portfolio from '/public/projects/portfolio.png'
 import Event from '/public/projects/event.jpg'
 import Youtube from '/public/projects/youtube.png'
+import Dashboard from '/public/projects/dashboard.png'
 import Placeholder from '/public/projects/placeholder.png'
 import Ecom from '/public/projects/ecom.png'
 import SkillCircle from '/public/skillcircle.png'
@@ -52,6 +53,12 @@ const Project = () => {
       desc: "Internal tool for managing go-to-market strategies, leads, and outreach.",
       image: Gtm,
       link: "https://gtm.whr.ai/internal"
+    },
+    {
+      name: "10times Dashboard",
+      desc: "Fully functional dashboard with user profile and their data.",
+      image: Dashboard,
+      link: "https://10times.com/dashboard/profile"
     },
     {
       name: "Portfolio",

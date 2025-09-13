@@ -7,6 +7,7 @@ import Event from '/public/projects/event.jpg'
 import Youtube from '/public/projects/youtube.png'
 import Dashboard from '/public/projects/dashboard.png'
 import Placeholder from '/public/projects/placeholder.png'
+import Gpt from '/public/projects/gpt.png'
 import Ecom from '/public/projects/ecom.png'
 import SkillCircle from '/public/skillcircle.png'
 import ProjectCard from './ProjectCard'
@@ -42,6 +43,12 @@ const Project = () => {
   })
 
   const projects = [
+    {
+      name: "ChatGPT Clone",
+      desc: "A functional ChatGPT UI clone built with React and Vercel AI SDK with memory context.",
+      image: Gpt,
+      link: "https://chatgpt-aj.vercel.app/"
+    },
     {
       name: "Whr.ai",
       desc: "AI-powered location intelligence platform for businesses and developers.",

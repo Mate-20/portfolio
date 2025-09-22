@@ -45,7 +45,7 @@ const Project = () => {
   const projects = [
     {
       name: "ChatGPT Clone",
-      desc: "A functional ChatGPT UI clone built with React and Vercel AI SDK with memory context.",
+      desc: "A functional ChatGPT UI clone built with Next.js and Vercel AI SDK with memory context.",
       image: Gpt,
       link: "https://chatgpt-aj.vercel.app/"
     },

@@ -19,7 +19,7 @@ const CareerHistory = () => {
   
   const history = [
     {
-      companyName: '10Times', logo: TenTimesLogo, designation: "SDE-1", timeline: "2024 Jan - Present",
+      companyName: '10Times', logo: TenTimesLogo, designation: "SDE-2", timeline: "2024 Jan - Present",
       summary: "Building and managing interactive frontend UIs using React and Next.js. Integrating with backend APIs and services to fetch and manipulate data. Participating in client meetings to gather requirements, provide updates,and address feedback."
     },
     {

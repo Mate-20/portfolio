@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
-import { House, Linkedin, Github } from "lucide-react"; // Assuming you're using lucide-react
+import { House, Linkedin, Github, FileText } from "lucide-react"; // Assuming you're using lucide-react
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -42,14 +42,15 @@ const Navbar = () => {
 
       <div className="flex gap-5 items-center">
         <Link href={"https://www.linkedin.com/in/akash-jindal-2258771a9/"} target="_blank"><Linkedin color="white" /></Link>
-        <Link href={"https://github.com/Mate-20/MyProjects"} target="_blank"><Github color="white" /></Link>
+        <Link href={"https://github.com/Mate-20"} target="_blank"><Github color="white" /></Link>
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={handleDownload}
           className="border cursor-pointer border-[var(--prim-text)] rounded text-[var(--prim-text)] px-4 py-1 
-             transition-colors duration-300 ease-in-out hover:bg-[#56E39F] hover:text-black"
+             transition-colors duration-300 ease-in-out hover:bg-[#56E39F] hover:text-black flex items-center gap-1"
         >
-          My Resume
+          <span><FileText size={16}/></span>
+          <span>Resume</span>
         </motion.button>
 
       </div>

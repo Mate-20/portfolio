@@ -21,6 +21,7 @@ import JiraLogo from '/public/skills/jiralogo.png'
 import SlackLogo from '/public/skills/slacklogo.png'
 import VscdoeLogo from '/public/skills/vscodelogo.png'
 import GptLogo from '/public/skills/gptlogo.png'
+import MongoLogo from '/public/skills/mongodblogo.png'
 import Image, { StaticImageData } from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Dot from './Dot'
@@ -55,6 +56,7 @@ const Skills = () => {
     { name: "Slack", logo: SlackLogo },
     { name: "Chat Gpt", logo: GptLogo },
     { name: "Github", logo: GitHubLogo },
+    { name: "MongoDB", logo: MongoLogo },
   ];
   return (
     <div className="flex flex-col items-center justify-center font-[family-name:var(--font-geist-jakarta)] relative w-full">

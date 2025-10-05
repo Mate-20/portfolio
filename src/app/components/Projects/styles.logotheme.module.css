@@ -1,0 +1,31 @@
+.logoContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logoContainer .logo {
+  position: absolute;
+  animation: driftAndFloat 15s linear infinite;
+  opacity: 0.9;
+}
+
+/* Keyframes for drifting from right to left while gently floating */
+@keyframes driftAndFloat {
+  0% {
+    transform: translate3d(100vw, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(50vw, -10vh, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate3d(0, 5vh, 0) rotate(180deg);
+  }
+  75% {
+    transform: translate3d(-50vw, -10vh, 0) rotate(270deg);
+  }
+  100% {
+    transform: translate3d(-100vw, 0, 0) rotate(360deg);
+  }
+}

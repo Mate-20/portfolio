@@ -116,7 +116,7 @@ const Project = () => {
               opacity: 1,
               y: 0,
               scale : 1,
-              transition: { duration: 0.2, delay: key * 0.1 },
+              transition: { duration: 0.2, delay : 0.1 },
             }}
             viewport={{ amount: 0.1 }}
           >

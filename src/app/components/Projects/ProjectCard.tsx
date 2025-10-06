@@ -119,7 +119,7 @@ const ProjectCard = ({ project }: Props) => {
           ? "bg-gradient-to-b from-black/60 to-transparent backdrop-blur-sm border border-white/10 shadow-2xl" 
           : "bg-[linear-gradient(71deg,#131313,#131313,#1c1c1c,#131313,#131313)] border border-gray-700/30 shadow-2xl group-hover:border-gray-600/50"
       }`}> */}
-      <div className={`relative w-full h-full rounded-2xl overflow-hidden transition-all duration-500 ${"bg-gradient-to-b from-black/60 to-transparent backdrop-blur-sm border border-white/10 shadow-2xl" }`}>
+      <div className={`relative w-full h-full rounded-2xl overflow-hidden transition-all duration-500 ${"bg-gradient-to-b from-black/60 to-transparent backdrop-blur-[5px] border border-white/10 shadow-2xl" }`}>
         
         {/* Subtle inner glow */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

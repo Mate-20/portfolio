@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const HeaderTwo = () => {
   const lines = [
     "Hi",
-    "My Name is Akash Jindal. I am a Software Developer with 2 Years of Industry Experience.",
+    "My Name is Akash Jindal. I am a Software Developer with more then 2 Years of Industry Experience.",
     "Skilled in React, Next.js, Framer Motion, and much more.",
     "Always learning, always building 🚀"
   ]

@@ -19,11 +19,10 @@ export default function Home() {
       </div>
       <div className="mt-[100px] flex items-center justify-center w-full"><CareerHistory /></div>
       <div className="mt-[300px] flex items-center justify-center w-full relative mb-[80px]">
-        <div className="absolute w-[900px] h-full top-[100px] max-[940px]:w-[700px] max-[710px]:w-[90%] 
+        <div className="absolute w-[900px] h-full pt-[130px] max-[940px]:w-[700px] max-[710px]:w-[90%] 
         max-[590px]:hidden">
           <ProjectBackStrip />
         </div>
-
         <Project />
       </div>
     </div>

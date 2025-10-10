@@ -22,6 +22,7 @@ import SlackLogo from '/public/skills/slacklogo.png'
 import VscdoeLogo from '/public/skills/vscodelogo.png'
 import GptLogo from '/public/skills/gptlogo.png'
 import MongoLogo from '/public/skills/mongodblogo.png'
+import ExpressLogo from '/public/skills/expressLogo.png'
 import Image, { StaticImageData } from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Dot from './Dot'
@@ -53,10 +54,11 @@ const Skills = () => {
     { name: "Vercel", logo: VercelLogo },
     { name: "Vs Code", logo: VscdoeLogo },
     { name: "Jira", logo: JiraLogo },
-    { name: "Slack", logo: SlackLogo },
+    { name: "Slack", logo: SlackLogo, width : 30, height : 30},
     { name: "Chat Gpt", logo: GptLogo },
     { name: "Github", logo: GitHubLogo },
-    { name: "MongoDB", logo: MongoLogo },
+    { name: "MongoDB", logo: MongoLogo, width : 30, height : 30},
+    { name: "Express Js", logo: ExpressLogo, width : 30, height : 30},
   ];
   return (
     <div className="flex flex-col items-center justify-center font-[family-name:var(--font-geist-jakarta)] relative w-full">
@@ -84,7 +86,7 @@ const Skills = () => {
             whileHover={{ border: "1px solid var(--prim-text)", scale: 1.1 }}
             className="group cursor-default flex items-center gap-2 py-2 px-4 border border-[#303030] bg-[#212121] rounded-[12px] w-fit"
           >
-            <Image src={skill.logo} alt={skill.name} width={20} height={20} />
+            <Image src={skill.logo} alt={skill.name} width={skill.width ? skill.width : 20} height={ skill.height ? skill.height : 20} />
             <div className="font-semibold bg-gradient-to-r from-[#faf2dc] to-[#faf2dc] bg-clip-text text-transparent transition-all duration-300 group-hover:from-[#56ccf2] group-hover:to-[#2f80ed]">
               {skill.name}
             </div>

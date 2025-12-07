@@ -37,11 +37,11 @@ const HeaderTwo = () => {
       {/* <Heading text='About Me' size={60}/> */}
       <div className='w-full flex h-[380px] overflow-hidden items-start justify-center'>
         <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ width :0, opacity: 0 }}
+          whileInView={{ width: '80%', opacity: 1 }}
           viewport={{ amount: 0.7 }}
-          // transition={{duration : 0.2}}
-          className='flex flex-col w-[80%] shadow-[0_15px_20px_rgba(86,227,159,0.1)] rounded-lg '>
+          transition={{duration :1, delay : 0.5, type : "spring"}}
+          className='flex flex-col rounded-lg '>
           <div className='flex items-center justify-between h-[45px] bg-[#27272a] w-full rounded-t-lg'>
             <div className='flex items-end gap-2 pl-3 h-full'>
               <div className='text-white flex items-center gap-2 bg-black rounded-t-md p-2 h-[35px] w-[200px] max-[400px]:w-[180px]'>
